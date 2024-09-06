@@ -1,0 +1,363 @@
+/* Global Styles */
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	scroll-behavior: smooth;
+  }
+  
+  /* Header Styles */
+  header {
+	background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+	color: #fff;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+  }
+  
+  .logo {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #f39c12;
+	margin-left: 20px;
+	font-family: 'Orbitron', sans-serif;
+  }
+  
+  .logo span {
+	font-size: 30px;
+	margin: 0 10px;
+  }
+  
+  .menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 20px;
+  }
+  
+  .menu a {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 15px;
+	position: relative;
+	font-size: 16px;
+	transition: color 0.3s ease, transform 0.3s ease, padding-bottom 0.3s ease;
+	font-family: 'Montserrat', sans-serif;
+	padding-bottom: 5px; /* Space for underline effect */
+  }
+  
+  .menu a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #f39c12;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	transform-origin: bottom right;
+  }
+  
+  .menu a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+  }
+  
+  .menu a:hover {
+	color: #f39c12;
+	transform: translateY(-2px);
+  }
+  
+  .menu .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .menu .dropdown-content {
+	display: none;
+	position: absolute;
+	background: #222;
+	min-width: 160px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	z-index: 1;
+  }
+  
+  .menu .dropdown-content a {
+	color: #fff;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 14px;
+  }
+  
+  .menu .dropdown-content a:hover {
+	background: #444;
+  }
+  
+  .menu .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .icon {
+	color: #fff;
+	font-size: 20px;
+	margin: 0 10px;
+	transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icon:hover {
+	color: #f39c12;
+	transform: scale(1.1);
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .slider {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	transition: transform 1s ease;
+  }
+  
+  .slide {
+	min-width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .content {
+	position: relative;
+	z-index: 1;
+	max-width: 600px;
+	animation: fadeInUp 1.5s ease;
+	margin-right: auto;
+	color: rgb(235, 173, 16);
+	padding: 60px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+  }
+  
+
+.box {
+  flex: 1;
+  min-width: 200px;
+  height: 200px;
+  background: #2c2c54; /* Fallback color */
+  background-size: cover; /* Ensure images cover the box */
+  background-position: center; /* Center the image */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.box img {
+	width: 100%;
+	height: 100%;
+}
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+  @keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(30px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  .hero .content h1 {
+	font-size: 60px;
+	margin: 0;
+	font-family: 'Orbitron', sans-serif;
+  }
+  
+  .hero .content p {
+	font-size: 24px;
+	color: #f39c12;
+  }
+  
+  .hero .content .btn {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .hero .content .btn:hover {
+	background-color: #f39c12;
+	color: #2c2c54;
+  }
+  
+  .hero .content .btn i {
+	margin-right: 10px;
+  }
+  
+  /* Article Styles */
+  article {
+	padding: 20px;
+  }
+  
+  .container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+  }
+  
+  .box {
+	flex: 1;
+	min-width: 200px;
+	background-image: hide;
+	height: 200px;
+	background: #2c2c54;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+	transform: scale(1.05);
+  }
+  
+  .box::before {
+	content: attr(data-title);
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #fff;
+	font-size: 18px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	border-radius: 5px;
+  }
+  
+  /* Footer Styles */
+  footer {
+	background-color: #2c2c54;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+  }
+  
+  footer a {
+	color: #f39c12;
+	text-decoration: none;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  footer .social-icons {
+	margin: 10px 0;
+  }
+  
+  footer .social-icons a {
+	color: #fff;
+	font-size: 24px;
+	margin: 0 10px;
+	transition: color 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+	color: #f39c12;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+	.hero .content h1 {
+	  font-size: 40px;
+	}
+	
+	.hero .content p {
+	  font-size: 20px;
+	}
+	
+	.hero .content .btn {
+	  padding: 8px 16px;
+	  font-size: 14px;
+	}
+	
+	.menu {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	
+	.menu a {
+	  margin: 10px 0;
+	}
+	
+	.container {
+	  flex-direction: column;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.hero .content h1 {
+	  font-size: 30px;
+	}
+	
+	.hero .content p {
+	  font-size: 18px;
+	}
+	
+	.hero .content .btn {
+	  padding: 6px 12px;
+	  font-size: 12px;
+	}
+	
+	.logo span {
+	  font-size: 24px;
+	}
+	
+	.menu a {
+	  font-size: 14px;
+	}
+  }
+  
+  

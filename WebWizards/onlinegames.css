@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #6a1b9a, #ab47bc); /* Softer gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+html {
+    font-size: 16px;
+}
+
+.wrapper {
+    position: relative; /* Updated to relative for animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    position: relative;
+}
+
+.button-option {
+    background: #ffffff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 8px;
+    font-size: 12vmin;
+    color: #d161ff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for animation */
+}
+
+.button-option:hover {
+    background-color: #e0e0e0; /* Light background on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+#restart {
+    font-size: 1.3em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #0a0027;
+    color: #ffffff;
+    border: none;
+    position: relative;
+    margin: 1.5em 0;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for animation */
+}
+
+#restart:hover {
+    background-color: #1a0036; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.popup {
+    background: rgba(128, 0, 128, 0.8); /* Semi-transparent background */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+    animation: fadeIn 0.5s; /* Added fade-in animation */
+}
+
+#new-game {
+    font-size: 0.6em;
+    padding: 0.5em 1em;
+    background-color: #0a0027;
+    color: #ffffff;
+    border-radius: 0.2em;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for animation */
+}
+
+#new-game:hover {
+    background-color: #1a0036; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.popup.hide {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

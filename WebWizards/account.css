@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    max-width: 450px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form.signup {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+}
+
+.forms.Show-Signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.forms.Show-Signup .form.login {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+}
+
+.heading {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.line {
+    background-color: #ddd;
+    margin: 20px 0;
+    height: 1px;
+}
+
+.underline {
+    background-color: #ff6f61;
+    margin: 0 80px 30px 80px;
+    height: 3px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.field {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.input input,
+.field button {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.field input {
+    outline: none;
+}
+
+.input input:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
+}
+
+.field button {
+    background-color: #ff6f61;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.field button:hover {
+    background-color: #e65c50;
+    transform: translateY(-2px);
+}
+
+.forg, .link {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.link a, .forg a {
+    text-decoration: none;
+    color: #ff6f61;
+    font-weight: 500;
+}
+
+.link a:hover, .forg a:hover {
+    text-decoration: underline;
+}
+
+.thirdLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.google {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.face-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.thirdLogin:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.space {
+    margin: 25px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form {
+        padding: 15px;
+    }
+    
+    .heading {
+        font-size: 24px;
+    }
+    
+    .field input, .field button {
+        font-size: 14px;
+    }
+}
